@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 const db = require('./models');
 const Role = db.role;
 
-db.mongoose.connect(`mongodb+srv://admin:doidera_223@users.h7o9q.mongodb.net/users?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {console.log("Successfully connect to MongoDB"); initial()}).catch(err => {console.error("Connection error", err); process.exit()});
+db.mongoose.connect(`mongodb+srv://admin:<password>@users.h7o9q.mongodb.net/users?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {console.log("Successfully connect to MongoDB"); initial()}).catch(err => {console.error("Connection error", err); process.exit()});
 
 function initial() {
   Role.estimatedDocumentCount((err, count) => {
