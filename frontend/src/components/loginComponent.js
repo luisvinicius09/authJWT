@@ -23,10 +23,10 @@ export default class Logic extends Component {
     this.onChangePassword = this.onChangePassword.bind(this);
 
     this.state = {
-      username = "",
-      password = "",
-      loading = false,
-      message = ""
+      username: "",
+      password: "",
+      loading: false,
+      message: ""
     }
   }
 
@@ -60,9 +60,9 @@ export default class Logic extends Component {
         },
         error => {
           const resMessage = 
-            (error.response &&
-              error.response.data &&
-              error.response.data.message) ||
+            (error.res &&
+              error.res.data &&
+              error.res.data.message) ||
             error.message ||
             error.toString();
 
